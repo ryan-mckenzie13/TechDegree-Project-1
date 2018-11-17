@@ -1,9 +1,10 @@
 #Techdegree Project 1
 #Guessing Game
+#Hoping to exceed expectations with keeping numbers 1-10/prompt to play again /high score calculation
+
 import random
 
 def start_game():
-# write your code inside this function.
     print("*"*40)
     print("   WELCOME TO THE NUMBER GUESSING GAME")
     print("*"*40)
@@ -15,7 +16,6 @@ def start_game():
     while guessing_game =='yes':
             
             try:
-#Trying to meet exceeds expectations with keeping number 1-10
                 player_guess=int(input("Please guess a number 1-10:  "))
                 if player_guess <1 or player_guess> 10:
                     raise ValueError("Value must be number 1-10")
@@ -27,8 +27,7 @@ def start_game():
                        
                 if player_guess == answer:
                     attempt=attempt+1
-                    print("Congrats you got it!  It took you {} tries.".format(attempt))
-#Trying to meet exceeds expectations with high score calculation                    
+                    print("Congrats you got it!  It took you {} tries.".format(attempt))                
                     if game_round== 1:
                         print("The current highscore is {}!".format(attempt))
                         high_score=0
@@ -38,7 +37,6 @@ def start_game():
                             print("The current highscore is {}".format(attempt))
                         else:
                             print("The current highscore is {}".format(high_score))
-#Trying to meet exceeds expectations with prompt to play again!
                     guessing_game=input("Would you like to play again? Yes/No:  ")
                     guessing_game=guessing_game.lower()
                     if guessing_game=='yes':
